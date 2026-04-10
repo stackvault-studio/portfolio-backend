@@ -8,7 +8,7 @@
         <version>4.0.1</version>
         <relativePath/>
     </parent>
-    <groupId>com.portfolio</groupId>
+    <groupId>com.stackvault</groupId>
     <artifactId>portfolio-backend</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>portfolio-backend</name>
@@ -34,7 +34,7 @@
         <repository>
             <id>github</id>
             <name>GitHub Packages</name>
-            <url>https://maven.pkg.github.com/stackvault/portfolio-model</url>
+            <url>https://maven.pkg.github.com/stackvault-studio/portfolio-model</url>
         </repository>
     </repositories>
     <dependencies>
