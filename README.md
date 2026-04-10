@@ -1,5 +1,8 @@
 # portfolio-backend
 
+[![dev](https://github.com/stackvault-studio/portfolio-backend/actions/workflows/docker-publish.yml/badge.svg?branch=dev)](https://github.com/stackvault-studio/portfolio-backend/actions/workflows/docker-publish.yml)
+[![uat](https://github.com/stackvault-studio/portfolio-backend/actions/workflows/docker-publish.yml/badge.svg?branch=main)](https://github.com/stackvault-studio/portfolio-backend/actions/workflows/docker-publish.yml)
+
 ## Project Description
 
 Backend REST API for the portfolio application built with Spring Boot. Provides endpoints for managing portfolio data including work experience, technologies, certifications, and achievements.
