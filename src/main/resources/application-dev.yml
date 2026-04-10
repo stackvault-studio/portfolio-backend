@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://aws-0-eu-north-1.pooler.supabase.com:5432/postgres
+    username: postgres.tzarsmdmlubediswwjnn
+    password: CQIRtZygwSmR0d6T
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        hbm2ddl:
+          schema_generation:
+            script:
+              action: create
+              create-target: ddl.sql

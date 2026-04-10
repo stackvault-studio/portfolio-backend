@@ -1,0 +1,19 @@
+server:
+  port: 8081
+
+logos:
+  java: "https://cdn.example.com/logos/java.png"
+  spring: "https://cdn.example.com/logos/spring.png"
+  react: "https://cdn.example.com/logos/react.png"
+  angular: "https://cdn.example.com/logos/angular.png"
+  K8s Admin: "https://cdn.example.com/logos/angular.png"
+  default: "https://cdn.example.com/logos/default.png"
+
+proficiency:
+  rates:
+    expert: 5
+    intermediate: 3
+    junior: 1
+  default: intermediate
+
+
