@@ -1,7 +1,7 @@
 # portfolio-backend
 
 [![dev](https://github.com/stackvault-studio/portfolio-backend/actions/workflows/docker-publish.yml/badge.svg?branch=dev)](https://github.com/stackvault-studio/portfolio-backend/actions/workflows/docker-publish.yml)
-[![uat](https://github.com/stackvault-studio/portfolio-backend/actions/workflows/docker-publish.yml/badge.svg?branch=main)](https://github.com/stackvault-studio/portfolio-backend/actions/workflows/docker-publish.yml)
+[![staging](https://github.com/stackvault-studio/portfolio-backend/actions/workflows/docker-publish.yml/badge.svg?branch=feature%2F*)](https://github.com/stackvault-studio/portfolio-backend/actions/workflows/docker-publish.yml)
 
 ## Project Description
 
