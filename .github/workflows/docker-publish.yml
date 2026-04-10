@@ -63,5 +63,5 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           build-args: |
             MODEL_VERSION=${{ steps.version.outputs.model_version }}
-            GITHUB_ACTOR=${{ github.actor }}
-            GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}
+            GITHUB_ACTOR=${{ vars.GH_ACTOR }}
+            GITHUB_TOKEN=${{ secrets.GH_TOKEN }}
