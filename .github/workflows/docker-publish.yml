@@ -49,9 +49,9 @@ jobs:
         with:
           images: ossemaabd95/stackvault
           tags: |
-            type=ref,event=branch,branch=dev,enable=true,prefix=backend-dev
-            type=ref,event=branch,branch=feature/*,enable=true,prefix=backend-staging
-            type=ref,event=branch,branch=fix/*,enable=true,prefix=backend-staging
+            type=ref,event=branch,branch=dev,enable=true,prefix=backend-dev,replace=true
+            type=ref,event=branch,branch=feature/*,enable=true,prefix=backend-staging,replace=true
+            type=ref,event=branch,branch=fix/*,enable=true,prefix=backend-staging,replace=true
             type=ref,event=tag,enable=true,prefix=backend-
 
       - name: Build and push AMD64
