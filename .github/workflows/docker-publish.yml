@@ -62,6 +62,8 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}-amd64
           labels: ${{ steps.meta.outputs.labels }}
           platforms: linux/amd64
+          cache-from: type=gha
+          cache-to: type=gha,mode=min
           build-args: |
             MODEL_VERSION=${{ steps.version.outputs.model_version }}
             GITHUB_ACTOR=${{ vars.GH_ACTOR }}
@@ -75,6 +77,8 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}-arm64
           labels: ${{ steps.meta.outputs.labels }}
           platforms: linux/arm64
+          cache-from: type=gha
+          cache-to: type=gha,mode=min
           build-args: |
             MODEL_VERSION=${{ steps.version.outputs.model_version }}
             GITHUB_ACTOR=${{ vars.GH_ACTOR }}
