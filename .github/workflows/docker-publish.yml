@@ -17,6 +17,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Determine version
+        id: version
+        run: |
+          if [[ $GITHUB_REF =~ ^refs/tags/v ]]; then
+            VERSION=${GITHUB_REF_NAME#v}
+            echo "version=$VERSION" >> $GITHUB_OUTPUT
+            echo "model_version=$VERSION" >> $GITHUB_OUTPUT
+          else
+            echo "version=1.0.0-SNAPSHOT" >> $GITHUB_OUTPUT
+            echo "model_version=1.0.0-SNAPSHOT" >> $GITHUB_OUTPUT
+          fi
+
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
@@ -48,3 +60,7 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+          build-args: |
+            MODEL_VERSION=${{ steps.version.outputs.model_version }}
+            GITHUB_ACTOR=${{ vars.GH_ACTOR }}
+            GITHUB_TOKEN=${{ secrets.GH_TOKEN }}
