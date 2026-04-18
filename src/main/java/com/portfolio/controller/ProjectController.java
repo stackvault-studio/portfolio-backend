@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin
 @RestController
 @RequestMapping("/api/projects")
 @RequiredArgsConstructor
@@ -58,7 +57,6 @@ public class ProjectController {
         return ResponseEntity.noContent().build();
     }
 
-    @CrossOrigin
     @GetMapping("/filter")
     public List<Project> getProjectsByWorkExperienceId(@RequestParam(name = "experienceId") Long experienceId) {
         return projectService.getProjectsByWorkExperienceId(experienceId);
